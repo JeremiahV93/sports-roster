@@ -1,0 +1,74 @@
+{
+  "player1" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/621111@3x.png",
+    "name": "Walker Buehler",
+    "position": "Pitcher",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player2" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/477132@3x.png",
+    "name": "Clayton Kershaw",
+    "position": "Pitcher",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player3" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/445276@3x.png",
+    "name": "Kenley Jansen",
+    "position": "Pitcher",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player4" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/605131@3x.png",
+    "name": "Austin Barnes",
+    "position": "Catcher",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player5" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/608369@3x.png",
+    "name": "Coery Seager",
+    "position": "Infielder",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player6" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/457759@3x.png",
+    "name": "Justin Turner",
+    "position": "Infielder",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player7" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/571970@3x.png",
+    "name": "Max Muncy",
+    "position": "Infielder",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player8" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/571771@3x.png",
+    "name": "Enrique Hernandez",
+    "position": "Infielder",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player9" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/605141@3x.png",
+    "name": "Mookie Betts",
+    "position": "Outfielder",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player10" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/572041@3x.png",
+    "name": "AJ Pollock",
+    "position": "Outfielder",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player11" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/641355@3x.png",
+    "name": "Cody Bellinger",
+    "position": "Outfielder",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  },
+  "player12" : {
+    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/621035@3x.png",
+    "name": "Chris Taylor",
+    "position": "Outfielder",
+    "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
+  }
+}
