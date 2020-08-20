@@ -7,6 +7,7 @@ import 'firebase/auth';
 import firebaseConnection from '../helpers/data/connection';
 
 import MyNavBar from '../components/MyNavbar';
+import TeamRoster from '../components/TeamRoster/TeamRoster';
 
 firebaseConnection();
 class App extends React.Component {
@@ -30,11 +31,18 @@ class App extends React.Component {
 
   render() {
     const { authed } = this.state;
+
+    const loadTeam = () => {
+      if (authed) {
+        return <TeamRoster />;
+      }
+      return <h1>Please Log in</h1>;
+    };
+
     return (
       <div className="App">
         <MyNavBar authed={authed}/>
-        {console.error(authed)}
-        <h2>HI</h2>
+        {loadTeam()}
       </div>
     );
   }

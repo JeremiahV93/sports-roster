@@ -11,8 +11,8 @@ class MyNavBar extends React.Component {
   render() {
     const { authed } = this.props;
     return (
-      <nav className="navbar navbar-light bg-light">
-          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ebayimg.com%2Fimages%2Fg%2FrxsAAOSw1g9ZoahA%2Fs-l300.jpg&f=1&nofb=1" width="44" height="60" alt="" />
+      <nav className="navbar navbar-light ">
+          <img src="https://s3.amazonaws.com/freebiesupply/large/2x/los-angeles-dodgers-logo-transparent.png" width="86" height="94" alt="" />
           {authed && <Logout />}
           {authed || <GoogleLogin />}
       </nav>

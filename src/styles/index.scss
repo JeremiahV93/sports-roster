@@ -2,7 +2,15 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
+@font-face {
+  font-family: 'dodgersFont';
+  src: local('dodgersFont'), url(../assets/dodgersFont.ttf) format('truetype') 
+}
+
+nav {
+  background-color: $accentColor !important;
+}
 
 body {
-  background-color: $favColor;
+  background-color: $primaryColor;
 }
