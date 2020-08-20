@@ -1,5 +1,6 @@
 import React from 'react';
 import playerShape from '../../helpers/props/playerShape';
+import './player.scss';
 
 class Player extends React.Component {
   static propTypes ={
@@ -9,12 +10,15 @@ class Player extends React.Component {
   render() {
     const { player } = this.props;
     return (
-      <div className="card" >
-      <div className="card-body">
+    <div className="card playerCard" >
       <img className="card-img-top" src={player.imageUrl} alt="Card cap" />
-        <h4 className="card-title">{player.name}</h4>
-        <h5>{player.position}</h5>
+      <div className="card-img-overlay">
+        <p className='team'> Dodgers</p>
+        <div className='info'>
+          <h4 className='name'>{player.name}</h4>
+          <h5 className='position'>Position: {player.position}</h5>
         </div>
+      </div>
     </div>
     );
   }
