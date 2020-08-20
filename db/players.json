@@ -1,72 +1,72 @@
 {
   "player1" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/621111@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fca-times.brightspotcdn.com%2Fdims4%2Fdefault%2F3803dce%2F2147483647%2Fstrip%2Ftrue%2Fcrop%2F2048x1432%2B0%2B0%2Fresize%2F840x587!%2Fquality%2F90%2F%3Furl%3Dhttps%3A%252F%252Fca-times.brightspotcdn.com%252Fec%252F0f%252F2e6571950346b05715726eaf9b38%252Fla-sp-dodgers-red-sox-world-series-game-3-2018-006&f=1&nofb=1",
     "name": "Walker Buehler",
     "position": "Pitcher",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player2" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/477132@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsportshub.cbsistatic.com%2Fi%2Fr%2F2018%2F09%2F19%2Faaf03d52-a025-422a-97c6-190f49a77cc0%2Fthumbnail%2F1200x675%2F902288ac7227fc23f7777f6fe36966d6%2Fclayton-kershaw.jpg&f=1&nofb=1",
     "name": "Clayton Kershaw",
     "position": "Pitcher",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player3" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/445276@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs22927.pcdn.co%2Fwp-content%2Fuploads%2F2019%2F07%2Fkenley-jansen-2.jpeg&f=1&nofb=1",
     "name": "Kenley Jansen",
     "position": "Pitcher",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player4" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/605131@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fca-times.brightspotcdn.com%2Fdims4%2Fdefault%2Fd51f196%2F2147483647%2Fstrip%2Ftrue%2Fcrop%2F3000x2083%2B0%2B0%2Fresize%2F840x583!%2Fquality%2F90%2F%3Furl%3Dhttps%253A%252F%252Fcalifornia-times-brightspot.s3.amazonaws.com%252F56%252F5d%252F00c8454c40a2a5a2c31e13cdcae4%252Fhttps-delivery.gettyimages.com%252Fdownloads%252F975158030.jpg&f=1&nofb=1",
     "name": "Austin Barnes",
     "position": "Catcher",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player5" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/608369@3x.png",
-    "name": "Coery Seager",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.performgroup.com%2Fdi%2Flibrary%2Fomnisport%2F2a%2F35%2Fseager-corey-usnews-getty-ftr_1awy0fiagn1d91qhb3g6ielztb.jpg%3Ft%3D1448523799%26w%3D960%26quality%3D70&f=1&nofb=1",
+    "name": "Corey Seager",
     "position": "Infielder",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player6" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/457759@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.R0uLOZcvUqxhEnfCOdXanwHaFM%26pid%3DApi&f=1",
     "name": "Justin Turner",
     "position": "Infielder",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player7" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/571970@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FCcRucotrYXZnQhqgIxPgMWtdeUs%3D%2F0x0%3A491x368%2F1200x800%2Ffilters%3Afocal(206x145%3A284x223)%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_image%2Fimage%2F63577627%2Fmuncy_e1540627150143.0.jpg&f=1&nofb=1",
     "name": "Max Muncy",
     "position": "Infielder",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player8" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/571771@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fww2.hdnux.com%2Fphotos%2F66%2F67%2F62%2F14384309%2F3%2F920x920.jpg&f=1&nofb=1",
     "name": "Enrique Hernandez",
     "position": "Infielder",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player9" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/605141@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.si.com%2F.image%2Far_16%3A9%252Cc_fill%252Ccs_srgb%252Cfl_progressive%252Cg_faces%3Acenter%252Cq_auto%3Agood%252Cw_620%2FMTcwMjM3NzQzNjg5OTAxMzkx%2Fmookie-betts-dodgers.jpg&f=1&nofb=1",
     "name": "Mookie Betts",
     "position": "Outfielder",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player10" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/572041@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Farizonasports.com%2Fwp-content%2Fuploads%2F2019%2F05%2Faj-pollock.jpg&f=1&nofb=1",
     "name": "AJ Pollock",
     "position": "Outfielder",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player11" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/641355@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gannett-cdn.com%2Fpresto%2F2019%2F07%2F04%2FUSAT%2F286d48e5-a6c4-45a8-b92b-3e0f3ac98cc8-dodgers-dbacks.JPG%3Fwidth%3D520%26height%3D390%26fit%3Dbounds%26auto%3Dwebp&f=1&nofb=1",
     "name": "Cody Bellinger",
     "position": "Outfielder",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
   },
   "player12" : {
-    "imageUrl": "https://content.mlb.com/images/headshots/current/60x60/621035@3x.png",
+    "imageUrl": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.texadviser.com%2Fwp-content%2Fuploads%2F2018%2F09%2FLDN-L-DODGERS-PADRES-0923-KB231.jpg&f=1&nofb=1",
     "name": "Chris Taylor",
     "position": "Outfielder",
     "uid": "uj02txqZ4SVxY0J2NQJwgWJ8qb92"
