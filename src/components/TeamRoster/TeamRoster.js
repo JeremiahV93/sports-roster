@@ -11,16 +11,28 @@ class TeamRoster extends React.Component {
     players: [],
   }
 
-  componentDidMount() {
+  getPlayerData = () => {
     playerData.getPlayersByUid(authData.getUid())
       .then((players) => this.setState({ players }))
       .catch((err) => console.error('player data did not load', err));
   }
 
+  componentDidMount() {
+    this.getPlayerData();
+  }
+
+  deletePlayer = (playerId) => {
+    playerData.deletePlayer(playerId)
+      .then(() => {
+        this.getPlayerData();
+      })
+      .catch((err) => console.error('did not delete player', err));
+  }
+
   render() {
     const { players } = this.state;
 
-    const playerCards = players.map((player) => <Player player={player} key={player.id} />);
+    const playerCards = players.map((player) => <Player deletePlayer={this.deletePlayer} player={player} key={player.id} />);
     return (
       <div >
         <h1 className='teamName'>Los Angeles Dodgers Roster</h1>
