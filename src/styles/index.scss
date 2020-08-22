@@ -6,6 +6,10 @@
   font-family: 'dodgersFont';
   src: local('dodgersFont'), url(../assets/dodgersFont.ttf) format('truetype') 
 }
+@font-face {
+  font-family: 'type-writer';
+  src: local('type-writer'), url(../assets/type-writer.ttf) format('truetype') 
+}
 
 nav {
   background-color: $accentColor !important;
