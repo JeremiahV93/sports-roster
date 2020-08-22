@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PlayerStats from '../PlayerStats/PlayerStats';
 import playerShape from '../../helpers/props/playerShape';
 import './player.scss';
 
@@ -19,13 +20,20 @@ class Player extends React.Component {
     const { player } = this.props;
     return (
       <div>
-        <div className="card playerCard" >
-          <img className="card-img-top" src={player.imageUrl} alt="Card cap" />
-            <div className="card-img-overlay">
-              <p className='team'> Dodgers</p>
-              <div className='info'>
-                <h4 className='name'>{player.name}</h4>
-                <h5 className='position'>Position: {player.position}</h5>
+        <div className="card flip-card playerCard" >
+          <div className='flip-card-inner'>
+            <div className='flip-card-front'>
+              <img className="card-img-top" src={player.imageUrl} alt="Card cap" />
+              <div className="card-img-overlay">
+                <p className='team'> Dodgers</p>
+                <div className='info'>
+                  <h4 className='name'>{player.name}</h4>
+                  <h5 className='position'>Position: {player.position}</h5>
+                </div>
+              </div>
+            </div>
+            <div className='flip-card-back'>
+              <PlayerStats player={player} key={player.id} />
             </div>
           </div>
         </div>
