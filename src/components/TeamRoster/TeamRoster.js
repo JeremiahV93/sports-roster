@@ -5,10 +5,13 @@ import playerData from '../../helpers/data/playerData';
 import authData from '../../helpers/data/authData';
 
 import Player from '../Player/Player';
+import PlayerForm from '../PlayerForm/PlayerForm';
 
 class TeamRoster extends React.Component {
   state = {
     players: [],
+    formOpen: false,
+    editPlayer: {},
   }
 
   getPlayerData = () => {
@@ -29,13 +32,36 @@ class TeamRoster extends React.Component {
       .catch((err) => console.error('did not delete player', err));
   }
 
+  createPlayer = (newObj) => {
+    playerData.addPlayer(newObj)
+      .then(() => {
+        this.getPlayerData();
+        this.setState({ formOpen: false });
+      })
+      .catch((err) => console.error(err));
+  }
+
+  openEditForm = (playerToEdit) => {
+    this.setState({ editBoard: {} });
+    this.setState({ formOpen: true, editPlayer: playerToEdit });
+  }
+
+  closeForm = () => {
+    this.setState({ editBoard: {}, formOpen: false });
+  }
+
   render() {
-    const { players } = this.state;
+    const { players, formOpen } = this.state;
 
     const playerCards = players.map((player) => <Player deletePlayer={this.deletePlayer} player={player} key={player.id} />);
     return (
       <div >
         <h1 className='teamName'>Los Angeles Dodgers Roster</h1>
+        {
+          formOpen
+            ? <button className="btn btn-danger" onClick={this.closeForm}> closeForm</button>
+            : <button className="btn btn-warning" onClick={() => this.setState({ formOpen: !formOpen })}> Add Player</button>
+        }        {formOpen ? <PlayerForm createPlayer={this.createPlayer} /> : ''}
         <div className="card-columns"> {playerCards}</div>
       </div>
     );
