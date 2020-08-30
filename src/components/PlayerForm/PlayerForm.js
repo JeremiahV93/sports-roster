@@ -6,6 +6,8 @@ import authData from '../../helpers/data/authData';
 class PlayerForm extends React.Component {
   static propTypes = {
     createPlayer: PropType.func.isRequired,
+    player: PropType.object.isRequired,
+    updatePlayer: PropType.func.isRequired,
   }
 
   state = {
@@ -18,6 +20,25 @@ class PlayerForm extends React.Component {
     AVG: 0,
     OPS: 0,
     HR: 0,
+    isEditing: false,
+  }
+
+  componentDidMount() {
+    const { player } = this.props;
+    if (player.name) {
+      this.setState({
+        name: player.name,
+        imageUrl: player.imageUrl,
+        position: player.position,
+        ERA: player.ERA,
+        WHIP: player.WHIP,
+        SO: player.SO,
+        AVG: player.AVG,
+        OPS: player.OPS,
+        HR: player.HR,
+        isEditing: true,
+      });
+    }
   }
 
   createNewPlayer = (e) => {
@@ -52,6 +73,32 @@ class PlayerForm extends React.Component {
       newPlayer.HR = HR;
     }
     createPlayer(newPlayer);
+  }
+
+  editPlayerEvent = (e) => {
+    e.preventDefault();
+    const {
+      name, position, imageUrl, ERA, WHIP, SO, AVG, OPS, HR,
+    } = this.state;
+    const { player, updatePlayer } = this.props;
+
+    const updatedPlayer = {
+      name,
+      position,
+      imageUrl,
+      uid: authData.getUid(),
+    };
+
+    if (position === 'pitcher') {
+      updatedPlayer.ERA = ERA;
+      updatedPlayer.SO = SO;
+      updatedPlayer.WHIP = WHIP;
+    } else {
+      updatedPlayer.AVG = AVG;
+      updatedPlayer.OPS = OPS;
+      updatedPlayer.HR = HR;
+    }
+    updatePlayer(player.id, updatedPlayer);
   }
 
   changeNameEvent = (e) => {
@@ -105,6 +152,18 @@ class PlayerForm extends React.Component {
   }
 
   render() {
+    const {
+      name,
+      position,
+      imageUrl,
+      ERA,
+      SO,
+      WHIP,
+      AVG,
+      HR,
+      OPS,
+      isEditing,
+    } = this.state;
     return (
 <form className='col-6 offset-3'>
         <div className="form-group">
@@ -113,6 +172,7 @@ class PlayerForm extends React.Component {
             type="text"
             className="form-control"
             id="name"
+            value={name}
             placeholder="Enter Player name"
             onChange={this.changeNameEvent}
             />
@@ -123,13 +183,14 @@ class PlayerForm extends React.Component {
             type="text"
             className="form-control"
             id="imageUrl"
+            value={imageUrl}
             placeholder="Enter URL"
             onChange={this.changeUrlEvent}
             />
         </div>
         <div className="form-group">
           <label htmlFor="Position">Position</label>
-          <select value={this.state.position} onChange={this.changePosEvent} className="form-control" id="position">
+          <select value={position} onChange={this.changePosEvent} className="form-control" id="position">
             <option>Please Select a Position</option>
             <option value='Pitcher'>Pitcher</option>
             <option value='Infielder'>Infielder</option>
@@ -142,6 +203,7 @@ class PlayerForm extends React.Component {
             type="text"
             className="form-control"
             id="ERA"
+            value={ERA}
             onChange={this.changeERAEvent}
             />
         </div>
@@ -151,6 +213,7 @@ class PlayerForm extends React.Component {
             type="number"
             className="form-control"
             id="SO"
+            value={SO}
             onChange={this.changeSOEvent}
             />
         </div>
@@ -160,6 +223,7 @@ class PlayerForm extends React.Component {
             type="text"
             className="form-control"
             id="WHIP"
+            value={WHIP}
             onChange={this.changeWHIPEvent}
             />
         </div>
@@ -169,6 +233,7 @@ class PlayerForm extends React.Component {
             type="text"
             className="form-control"
             id="AVG"
+            value={AVG}
             onChange={this.changeAVGEvent}
             />
         </div>
@@ -178,6 +243,7 @@ class PlayerForm extends React.Component {
             type="text"
             className="form-control"
             id="OPS"
+            value={OPS}
             onChange={this.changeOPSEvent}
             />
         </div>
@@ -187,6 +253,7 @@ class PlayerForm extends React.Component {
             type="number"
             className="form-control"
             id="HR"
+            value={HR}
             onChange={this.changeHREvent}
             />
         </div>
@@ -200,8 +267,12 @@ class PlayerForm extends React.Component {
             onChange={this.changeUrlEvent}
             />
         </div> */}
-        <button type="submit" className="btn btn-success" onClick={this.createNewPlayer}>Submit</button>
-      </form>
+{
+      isEditing
+        ? <button className="btn btn-success" onClick={this.editPlayerEvent}>Edit player</button>
+        : <button type="submit" className="btn btn-success" onClick={this.createNewPlayer}>Recruit Player</button>
+
+    }      </form>
     );
   }
 }
