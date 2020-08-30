@@ -8,12 +8,19 @@ class Player extends React.Component {
   static propTypes ={
     player: playerShape.playerShape,
     deletePlayer: PropTypes.func.isRequired,
+    openEditForm: PropTypes.func.isRequired,
   }
 
   deletePlayerEvent = (e) => {
     e.preventDefault();
     const { player, deletePlayer } = this.props;
     deletePlayer(player.id);
+  }
+
+  editPlayerEvent = (e) => {
+    e.preventDefault();
+    const { player, openEditForm } = this.props;
+    openEditForm(player);
   }
 
   render() {
@@ -38,6 +45,8 @@ class Player extends React.Component {
           </div>
         </div>
         <button className='btn btn-danger' onClick={this.deletePlayerEvent}>Trade Player</button>
+        <button className='btn btn-warning' onClick={this.editPlayerEvent}>Update Player</button>
+
       </div>
     );
   }

@@ -41,6 +41,15 @@ class TeamRoster extends React.Component {
       .catch((err) => console.error(err));
   }
 
+  updatePlayer = (playerId, playerObj) => {
+    playerData.updatePlayer(playerId, playerObj)
+      .then(() => {
+        this.getPlayerData();
+        this.setState({ editBoard: {}, formOpen: false });
+      })
+      .catch((err) => console.error(err));
+  }
+
   openEditForm = (playerToEdit) => {
     this.setState({ editBoard: {} });
     this.setState({ formOpen: true, editPlayer: playerToEdit });
@@ -51,9 +60,9 @@ class TeamRoster extends React.Component {
   }
 
   render() {
-    const { players, formOpen } = this.state;
+    const { players, formOpen, editPlayer } = this.state;
 
-    const playerCards = players.map((player) => <Player deletePlayer={this.deletePlayer} player={player} key={player.id} />);
+    const playerCards = players.map((player) => <Player deletePlayer={this.deletePlayer} player={player} openEditForm={this.openEditForm} key={player.id} />);
     return (
       <div >
         <h1 className='teamName'>Los Angeles Dodgers Roster</h1>
@@ -61,7 +70,7 @@ class TeamRoster extends React.Component {
           formOpen
             ? <button className="btn btn-danger" onClick={this.closeForm}> closeForm</button>
             : <button className="btn btn-warning" onClick={() => this.setState({ formOpen: !formOpen })}> Add Player</button>
-        }        {formOpen ? <PlayerForm createPlayer={this.createPlayer} /> : ''}
+        }        {formOpen ? <PlayerForm createPlayer={this.createPlayer} player={editPlayer} updatePlayer={this.updatePlayer} /> : ''}
         <div className="card-columns"> {playerCards}</div>
       </div>
     );
