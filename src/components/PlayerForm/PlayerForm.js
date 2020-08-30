@@ -64,12 +64,12 @@ class PlayerForm extends React.Component {
     };
 
     if (position === 'pitcher') {
-      newPlayer.ERA = ERA;
+      newPlayer.ERA = ERA * 100;
       newPlayer.SO = SO;
-      newPlayer.WHIP = WHIP;
+      newPlayer.WHIP = WHIP * 1;
     } else {
-      newPlayer.AVG = AVG;
-      newPlayer.OPS = OPS;
+      newPlayer.AVG = AVG * 1000;
+      newPlayer.OPS = OPS * 1;
       newPlayer.HR = HR;
     }
     createPlayer(newPlayer);
@@ -90,12 +90,12 @@ class PlayerForm extends React.Component {
     };
 
     if (position === 'pitcher') {
-      updatedPlayer.ERA = ERA;
+      updatedPlayer.ERA = ERA * 100;
       updatedPlayer.SO = SO;
-      updatedPlayer.WHIP = WHIP;
+      updatedPlayer.WHIP = WHIP * 1;
     } else {
-      updatedPlayer.AVG = AVG;
-      updatedPlayer.OPS = OPS;
+      updatedPlayer.AVG = AVG * 1000;
+      updatedPlayer.OPS = OPS * 1;
       updatedPlayer.HR = HR;
     }
     updatePlayer(player.id, updatedPlayer);
@@ -113,7 +113,7 @@ class PlayerForm extends React.Component {
 
   changeERAEvent = (e) => {
     e.preventDefault();
-    this.setState({ ERA: e.target.value * 100 });
+    this.setState({ ERA: e.target.value });
   }
 
   changeSOEvent = (e) => {
@@ -123,17 +123,17 @@ class PlayerForm extends React.Component {
 
   changeWHIPEvent = (e) => {
     e.preventDefault();
-    this.setState({ WHIP: e.target.value * 100 });
+    this.setState({ WHIP: e.target.value });
   }
 
   changeAVGEvent = (e) => {
     e.preventDefault();
-    this.setState({ AVG: e.target.value * 1000 });
+    this.setState({ AVG: e.target.value });
   }
 
   changeOPSEvent = (e) => {
     e.preventDefault();
-    this.setState({ OPS: e.target.value * 1 });
+    this.setState({ OPS: e.target.value });
   }
 
   changeHREvent = (e) => {
